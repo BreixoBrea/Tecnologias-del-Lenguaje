@@ -1,0 +1,12 @@
+material/posts_by_author.csv
+material/posts_corregido.csv
+material/posts.csv
+otros_notebooks_antiguos/material/posts_clean.csv
+otros_notebooks_antiguos/material/posts_clean_by_author.csv
+otros_notebooks_antiguos/material/post_by_author.csv
+material/top50_posts_per_user.csv
+otros_notebooks_antiguos/material/post_by_author_reducido.csv
+
+*.pyc
+__pycache__/
+*.ipynb_checkpoints
