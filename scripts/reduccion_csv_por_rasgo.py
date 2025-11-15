@@ -10,7 +10,7 @@ from tqdm import tqdm
 # Configuración CESGA
 # -----------------------------
 BASE_PATH = "C:\\Users\\Usuario\\OneDrive - Universidade de Santiago de Compostela\\GRIA\\4º CURSO. 1º CUADRIMESTRE\\Tecnoloxías da Linguaxe\\práctica 4\\material"
-POSTS_CSV = os.path.join(BASE_PATH, "post_by_author.csv")
+POSTS_CSV = os.path.join(BASE_PATH, "posts_by_author.csv")
 EMBEDDING_FILE = os.path.join(BASE_PATH, "trait_embeddings.csv")
 OUTPUT_CSV = os.path.join(BASE_PATH, "top10_posts_per_user.csv")
 TOP_K = 10
