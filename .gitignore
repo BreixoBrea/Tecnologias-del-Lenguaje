@@ -6,7 +6,7 @@ otros_notebooks_antiguos/material/posts_clean.csv
 otros_notebooks_antiguos/material/posts_clean_by_author.csv
 otros_notebooks_antiguos/material/posts_by_author.csv
 material/top50_posts_per_user.csv
-otros_notebooks_antiguos/material/post_by_author_reducido.csv
+otros_notebooks_antiguos/material/posts_by_author_reducido.csv
 archivos_antiguos/posts_by_author_sin_dividir.csv
 
 *.pyc
