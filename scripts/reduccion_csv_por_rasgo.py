@@ -24,11 +24,8 @@ TRAIT_ORDER = ["Openness", "Conscientiousness", "Extraversion", "Agreeableness",
 print("🔹 Loading trait embeddings CSV...")
 
 df_traits = pd.read_csv(EMBEDDING_FILE)
-
-# Ordenamos para garantizar orden Big-5
 df_traits = df_traits.set_index("trait").loc[TRAIT_ORDER].reset_index()
 
-# Extraemos solo columnas dim_*
 dim_cols = [c for c in df_traits.columns if c.startswith("dim_")]
 all_trait_embeddings = df_traits[dim_cols].to_numpy()  # shape = (5, D)
 
@@ -58,58 +55,70 @@ def encode_batches(sentences, batch_size=512):
     return np.vstack(embeddings)
 
 # -----------------------------
-# 5️⃣ Top-K posts por usuario (con 5 rasgos)
+# 5️⃣ Top-K posts por usuario Y por rasgo
 # -----------------------------
-def get_top_k_posts(posts, trait_embeddings, top_k=10, batch_size=512):
+def get_top_k_posts_per_trait(posts, trait_embeddings, top_k=10, batch_size=512):
     if len(posts) == 0:
-        return []
+        return {}
 
     # Embeddings posts → (N, D)
     embeddings_posts = encode_batches(posts, batch_size)
 
-    # Similaridad → (N, 5)
-    sims = cosine_similarity(embeddings_posts, trait_embeddings)
+    results = {}
 
-    # Media para ranking → (N,)
-    mean_scores = sims.mean(axis=1)
+    # Para cada rasgo individualmente
+    for t_idx, trait_vec in enumerate(trait_embeddings):
 
-    # Top K
-    top_indices = np.argsort(mean_scores)[::-1][:min(top_k, len(posts))]
+        # similitud (1,N)
+        sims = cosine_similarity([trait_vec], embeddings_posts)[0]
 
-    # Construimos resultados
-    top_results = []
-    for i in top_indices:
-        entry = {
-            "post": posts[i],
-            "sim_openness": sims[i, 0],
-            "sim_conscientiousness": sims[i, 1],
-            "sim_extraversion": sims[i, 2],
-            "sim_agreeableness": sims[i, 3],
-            "sim_neuroticism": sims[i, 4],
-            "mean_similarity": mean_scores[i]
-        }
-        top_results.append(entry)
+        # TOP-K similitud
+        top_idx = np.argsort(sims)[::-1][:min(top_k, len(posts))]
 
-    return top_results
+        # guardamos
+        results[t_idx] = [
+            {
+                "post": posts[i],
+                "similarity": sims[i]
+            }
+            for i in top_idx
+        ]
+
+    return results
 
 # -----------------------------
 # 6️⃣ Aplicar por usuario
 # -----------------------------
 results = []
+
 for idx, row in tqdm(df.iterrows(), total=len(df), desc="Processing users"):
     username = row["username"]
     posts = row["body"]
 
-    top_posts = get_top_k_posts(posts, all_trait_embeddings, TOP_K, BATCH_SIZE)
+    # Diccionario: trait_index -> lista de posts top
+    top_by_trait = get_top_k_posts_per_trait(posts, all_trait_embeddings, TOP_K, BATCH_SIZE)
 
-    for entry in top_posts:
-        entry["username"] = username
-        results.append(entry)
+    # Guardar cada resultado en estructura plana
+    for t_idx, entries in top_by_trait.items():
+        trait_name = TRAIT_ORDER[t_idx]
+
+        for entry in entries:
+            results.append({
+                "username": username,
+                "trait": trait_name,
+                "post": entry["post"],
+                "similarity": entry["similarity"]
+            })
 
 # -----------------------------
 # 7️⃣ Guardar resultados
 # -----------------------------
 df_results = pd.DataFrame(results)
+
+# Asegurar username al principio
+cols = ["username", "trait", "post", "similarity"]
+df_results = df_results[cols]
+
 df_results.to_csv(OUTPUT_CSV, index=False)
 
 print(f"✅ Saved top posts per user in {OUTPUT_CSV}")
