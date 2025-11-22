@@ -2,12 +2,17 @@ material/posts_by_author.csv
 material/posts_corregido.csv
 material/posts_corregido_dividido.csv
 material/posts.csv
+material/top50_posts_per_user.csv
+material/top50_posts_per_user_reduced.csv
 otros_notebooks_antiguos/material/posts_clean.csv
 otros_notebooks_antiguos/material/posts_clean_by_author.csv
 otros_notebooks_antiguos/material/posts_by_author.csv
-material/top50_posts_per_user.csv
 otros_notebooks_antiguos/material/posts_by_author_reducido.csv
 archivos_antiguos/posts_by_author_sin_dividir.csv
+archivos_antiguos/top50_posts_per_user_miniLLM_by_trait.csv
+archivos_antiguos/top50_posts_per_user_miniLLM_by_trait_reduced.csv
+archivos_antiguos/top50_posts_per_user_miniLLM_polarity.csv
+archivos_antiguos/top50_posts_per_user_miniLLM_polarity_reduced.csv
 
 *.pyc
 __pycache__/
