@@ -12,11 +12,12 @@ from tqdm import tqdm
 BASE_PATH = "C:\\Users\\Usuario\\OneDrive - Universidade de Santiago de Compostela\\GRIA\\4º CURSO. 1º CUADRIMESTRE\\Tecnoloxías da Linguaxe\\práctica 4\\material"
 POSTS_CSV = os.path.join(BASE_PATH, "posts_by_author.csv")
 EMBEDDING_FILE = os.path.join(BASE_PATH, "trait_embeddings.csv")
-OUTPUT_CSV = os.path.join(BASE_PATH, "top10_posts_per_user.csv")
-TOP_K = 10
-BATCH_SIZE = 512
+OUTPUT_CSV = os.path.join(BASE_PATH, "top50_posts_per_user.csv")
 
-TRAIT_ORDER = ["Openness", "Conscientiousness", "Extraversion", "Agreeableness", "Neuroticism"]
+TOP_K = 50
+BATCH_SIZE = 2048
+
+TRAIT_ORDER = ["Agreeableness", "Openness", "Conscientiousness", "Extraversion", "Neuroticism"]
 
 # -----------------------------
 # 1️⃣ Cargar embeddings Big Five desde CSV
