@@ -1,0 +1,87 @@
+slurmstepd: info: Setting TMPDIR to /scratch/3256311. Previous errors about TMPDIR can be discarded
+Looking in indexes: https://download.pytorch.org/whl/cu118
+Requirement already satisfied: torch in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (2.7.1+cu118)
+Requirement already satisfied: torchvision in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (0.22.1+cu118)
+Requirement already satisfied: torchaudio in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (2.7.1+cu118)
+Requirement already satisfied: filelock in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (from torch) (3.19.1)
+Requirement already satisfied: typing-extensions>=4.10.0 in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (from torch) (4.15.0)
+Requirement already satisfied: sympy>=1.13.3 in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (from torch) (1.14.0)
+Requirement already satisfied: networkx in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (from torch) (3.2.1)
+Requirement already satisfied: jinja2 in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (from torch) (3.1.6)
+Requirement already satisfied: fsspec in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (from torch) (2025.10.0)
+Requirement already satisfied: nvidia-cuda-nvrtc-cu11==11.8.89 in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (from torch) (11.8.89)
+Requirement already satisfied: nvidia-cuda-runtime-cu11==11.8.89 in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (from torch) (11.8.89)
+Requirement already satisfied: nvidia-cuda-cupti-cu11==11.8.87 in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (from torch) (11.8.87)
+Requirement already satisfied: nvidia-cudnn-cu11==9.1.0.70 in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (from torch) (9.1.0.70)
+Requirement already satisfied: nvidia-cublas-cu11==11.11.3.6 in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (from torch) (11.11.3.6)
+Requirement already satisfied: nvidia-cufft-cu11==10.9.0.58 in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (from torch) (10.9.0.58)
+Requirement already satisfied: nvidia-curand-cu11==10.3.0.86 in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (from torch) (10.3.0.86)
+Requirement already satisfied: nvidia-cusolver-cu11==11.4.1.48 in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (from torch) (11.4.1.48)
+Requirement already satisfied: nvidia-cusparse-cu11==11.7.5.86 in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (from torch) (11.7.5.86)
+Requirement already satisfied: nvidia-nccl-cu11==2.21.5 in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (from torch) (2.21.5)
+Requirement already satisfied: nvidia-nvtx-cu11==11.8.86 in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (from torch) (11.8.86)
+Requirement already satisfied: triton==3.3.1 in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (from torch) (3.3.1)
+Requirement already satisfied: setuptools>=40.8.0 in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (from triton==3.3.1->torch) (58.1.0)
+Requirement already satisfied: numpy in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (from torchvision) (2.0.2)
+Requirement already satisfied: pillow!=8.3.*,>=5.3.0 in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (from torchvision) (11.3.0)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (from sympy>=1.13.3->torch) (1.3.0)
+Requirement already satisfied: MarkupSafe>=2.0 in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (from jinja2->torch) (2.1.5)
+Requirement already satisfied: transformers in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (4.57.3)
+Requirement already satisfied: huggingface_hub in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (0.36.0)
+Collecting huggingface_hub
+  Downloading huggingface_hub-1.2.1-py3-none-any.whl.metadata (13 kB)
+Requirement already satisfied: scikit-learn in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (1.6.1)
+Requirement already satisfied: swifter in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (1.4.0)
+Requirement already satisfied: tqdm in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (4.67.1)
+Requirement already satisfied: pandas in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (2.3.3)
+Requirement already satisfied: filelock in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (from transformers) (3.19.1)
+Requirement already satisfied: numpy>=1.17 in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (from transformers) (2.0.2)
+Requirement already satisfied: packaging>=20.0 in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (from transformers) (25.0)
+Requirement already satisfied: pyyaml>=5.1 in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (from transformers) (6.0.3)
+Requirement already satisfied: regex!=2019.12.17 in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (from transformers) (2025.11.3)
+Requirement already satisfied: requests in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (from transformers) (2.32.5)
+Requirement already satisfied: tokenizers<=0.23.0,>=0.22.0 in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (from transformers) (0.22.1)
+Requirement already satisfied: safetensors>=0.4.3 in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (from transformers) (0.7.0)
+Requirement already satisfied: fsspec>=2023.5.0 in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (from huggingface_hub) (2025.10.0)
+Requirement already satisfied: typing-extensions>=3.7.4.3 in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (from huggingface_hub) (4.15.0)
+Requirement already satisfied: hf-xet<2.0.0,>=1.1.3 in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (from huggingface_hub) (1.2.0)
+Requirement already satisfied: scipy>=1.6.0 in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (from scikit-learn) (1.13.1)
+Requirement already satisfied: joblib>=1.2.0 in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (from scikit-learn) (1.5.2)
+Requirement already satisfied: threadpoolctl>=3.1.0 in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (from scikit-learn) (3.6.0)
+Requirement already satisfied: psutil>=5.6.6 in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (from swifter) (7.1.3)
+Requirement already satisfied: dask>=2.10.0 in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (from dask[dataframe]>=2.10.0->swifter) (2024.8.0)
+Requirement already satisfied: python-dateutil>=2.8.2 in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (from pandas) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (from pandas) (2025.2)
+Requirement already satisfied: tzdata>=2022.7 in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (from pandas) (2025.2)
+Requirement already satisfied: click>=8.1 in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (from dask>=2.10.0->dask[dataframe]>=2.10.0->swifter) (8.1.8)
+Requirement already satisfied: cloudpickle>=1.5.0 in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (from dask>=2.10.0->dask[dataframe]>=2.10.0->swifter) (3.1.2)
+Requirement already satisfied: partd>=1.4.0 in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (from dask>=2.10.0->dask[dataframe]>=2.10.0->swifter) (1.4.2)
+Requirement already satisfied: toolz>=0.10.0 in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (from dask>=2.10.0->dask[dataframe]>=2.10.0->swifter) (1.1.0)
+Requirement already satisfied: importlib-metadata>=4.13.0 in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (from dask>=2.10.0->dask[dataframe]>=2.10.0->swifter) (8.7.0)
+Requirement already satisfied: dask-expr<1.2,>=1.1 in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (from dask[dataframe]>=2.10.0->swifter) (1.1.10)
+Requirement already satisfied: pyarrow>=7.0.0 in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (from dask-expr<1.2,>=1.1->dask[dataframe]>=2.10.0->swifter) (21.0.0)
+Requirement already satisfied: zipp>=3.20 in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (from importlib-metadata>=4.13.0->dask>=2.10.0->dask[dataframe]>=2.10.0->swifter) (3.23.0)
+Requirement already satisfied: locket in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (from partd>=1.4.0->dask>=2.10.0->dask[dataframe]>=2.10.0->swifter) (1.0.0)
+Requirement already satisfied: six>=1.5 in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (from python-dateutil>=2.8.2->pandas) (1.17.0)
+Requirement already satisfied: charset_normalizer<4,>=2 in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (from requests->transformers) (3.4.4)
+Requirement already satisfied: idna<4,>=2.5 in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (from requests->transformers) (3.11)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (from requests->transformers) (2.6.0)
+Requirement already satisfied: certifi>=2017.4.17 in /mnt/netapp2/Store_uni/home/usc/cursos/curso1070/myenv/lib/python3.9/site-packages (from requests->transformers) (2025.11.12)
+Posts cargados: 3126832
+
+=== Selección de mejor Ridge para agreeableness ===
+MSE: 0.08 | MAE: 0.24 | R²: 0.0133 | Pearson: 0.1474
+
+=== Selección de mejor Ridge para conscientiousness ===
+MSE: 0.09 | MAE: 0.25 | R²: -0.0040 | Pearson: -0.1243
+
+=== Selección de mejor Ridge para extraversion ===
+MSE: 0.08 | MAE: 0.24 | R²: -0.0005 | Pearson: 0.0494
+
+=== Selección de mejor Ridge para neuroticism ===
+MSE: 0.09 | MAE: 0.26 | R²: -0.0059 | Pearson: -0.0176
+
+=== Selección de mejor Ridge para openness ===
+MSE: 0.09 | MAE: 0.25 | R²: 0.0009 | Pearson: 0.0400
+
+Mejores modelos Ridge guardados como ridge_mt_[trait].pkl
